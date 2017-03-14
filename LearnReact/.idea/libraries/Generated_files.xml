@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/default01/040组件和属性/index01.js" />
+        <item url="file://$PROJECT_DIR$/dist/default01/020JSX/index01.js" />
+        <item url="file://$PROJECT_DIR$/dist/default01/010begin/index01.js" />
+        <item url="file://$PROJECT_DIR$/dist/default01/030元素渲染/index01.js" />
+        <item url="file://$PROJECT_DIR$/dist/default01/040组件和属性/index02.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/default01/040组件和属性/index01.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/020JSX/index01.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/010begin/index01.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/030元素渲染/index01.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/040组件和属性/index02.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
