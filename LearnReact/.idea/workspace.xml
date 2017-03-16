@@ -69,8 +69,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="829" />
-    <option name="y" value="164" />
+    <option name="x" value="225" />
+    <option name="y" value="132" />
     <option name="width" value="1292" />
     <option name="height" value="875" />
   </component>
@@ -240,7 +240,7 @@
     <option name="totallyTimeSpent" value="1695000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="829" y="164" width="1292" height="875" extended-state="0" />
+    <frame x="225" y="132" width="1292" height="875" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23205742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
