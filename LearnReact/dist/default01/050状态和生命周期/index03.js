@@ -7,6 +7,20 @@ class Clock extends React.Component {
         super(props);
         this.state = { date: new Date() };
     }
+    //组件被第一次渲染后调用
+    componentDidMount() {
+        this.timerID = setInterval(() => this.tick(), 1000);
+    }
+    //组件移除时调用
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
+    tick() {
+        //设置state的值,并调用render方法重绘组件
+        this.setState({
+            date: new Date()
+        });
+    }
     render() {
         return React.createElement(
             "div",

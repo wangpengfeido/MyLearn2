@@ -5,6 +5,7 @@
         <item url="file://$PROJECT_DIR$/dist/default01/040组件和属性/index01.js" />
         <item url="file://$PROJECT_DIR$/dist/default01/020JSX/index01.js" />
         <item url="file://$PROJECT_DIR$/dist/default01/010begin/index01.js" />
+        <item url="file://$PROJECT_DIR$/dist/default01/050状态和生命周期/index04.js" />
         <item url="file://$PROJECT_DIR$/dist/dist/default01/050状态和生命周期/index01.js" />
         <item url="file://$PROJECT_DIR$/dist/dist/default01/050状态和生命周期/index03.js" />
         <item url="file://$PROJECT_DIR$/dist/dist/default01/050状态和生命周期/index02.js" />
@@ -17,16 +18,17 @@
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/dist/default01/040组件和属性/index01.js" />
-      <root url="file://$PROJECT_DIR$/dist/default01/020JSX/index01.js" />
-      <root url="file://$PROJECT_DIR$/dist/default01/010begin/index01.js" />
       <root url="file://$PROJECT_DIR$/dist/dist/default01/050状态和生命周期/index01.js" />
       <root url="file://$PROJECT_DIR$/dist/dist/default01/050状态和生命周期/index03.js" />
       <root url="file://$PROJECT_DIR$/dist/dist/default01/050状态和生命周期/index02.js" />
       <root url="file://$PROJECT_DIR$/dist/default01/030元素渲染/index01.js" />
-      <root url="file://$PROJECT_DIR$/dist/default01/040组件和属性/index02.js" />
       <root url="file://$PROJECT_DIR$/dist/default01/050状态和生命周期/index01.js" />
       <root url="file://$PROJECT_DIR$/dist/default01/050状态和生命周期/index03.js" />
       <root url="file://$PROJECT_DIR$/dist/default01/050状态和生命周期/index02.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/020JSX/index01.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/010begin/index01.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/050状态和生命周期/index04.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/040组件和属性/index02.js" />
     </CLASSES>
     <SOURCES />
   </library>
