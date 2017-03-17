@@ -9,13 +9,9 @@ var name = 'wang';
 
 //组件的首字母最好大写
 function Welcome(props) {
-    return React.createElement(
-        'h1',
-        null,
-        'welcome,',
-        props.name
-    );
+    return React.createElement('h1', null, 'welcome,', props.name);
 }
 
 ReactDOM.render(React.createElement(Welcome, { name: name }), document.getElementById('root'));
+//# sourceMappingURL=index01.js.map
 //# sourceMappingURL=index01.js.map

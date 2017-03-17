@@ -1,0 +1,35 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/default01/010begin/index01.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/default01/040组件和属性/index01.js" />
+        <item url="file://$PROJECT_DIR$/dist/default01/050状态和生命周期/index02.js" />
+        <item url="file://$PROJECT_DIR$/dist/default01/040组件和属性/index01.js" />
+        <item url="file://$PROJECT_DIR$/dist/default01/050状态和生命周期/index04.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/default01/050状态和生命周期/index04.js" />
+        <item url="file://$PROJECT_DIR$/dist/default01/050状态和生命周期/index03.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/dist/default01/050状态和生命周期/index02.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/dist/default01/050状态和生命周期/index03.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/dist/default01/050状态和生命周期/index01.js" />
+        <item url="file://$PROJECT_DIR$/dist/default01/050状态和生命周期/index01.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/default01/040组件和属性/index02.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/dist/default01/040组件和属性/index01.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/050状态和生命周期/index02.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/default01/050状态和生命周期/index04.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/050状态和生命周期/index03.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/dist/default01/050状态和生命周期/index02.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/dist/default01/050状态和生命周期/index03.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/dist/default01/050状态和生命周期/index01.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/010begin/index01.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/040组件和属性/index01.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/050状态和生命周期/index04.js" />
+      <root url="file://$PROJECT_DIR$/dist/default01/050状态和生命周期/index01.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/default01/040组件和属性/index02.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
