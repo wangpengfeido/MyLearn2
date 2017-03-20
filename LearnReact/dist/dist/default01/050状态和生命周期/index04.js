@@ -58,16 +58,7 @@ var Welcome = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            return React.createElement(
-                'h1',
-                null,
-                'welcome,',
-                this.props.firstName,
-                '-',
-                this.state.lastName,
-                '-',
-                this.state.fullName
-            );
+            return React.createElement('h1', null, 'welcome,', this.props.firstName, '-', this.state.lastName, '-', this.state.fullName);
         }
     }]);
 
@@ -75,4 +66,5 @@ var Welcome = function (_React$Component) {
 }(React.Component);
 
 ReactDOM.render(React.createElement(Welcome, { firstName: firstName }), document.getElementById('root'));
+//# sourceMappingURL=index04.js.map
 //# sourceMappingURL=index04.js.map

@@ -7,7 +7,4 @@ ReactDOM.render(React.createElement(
   null,
   'hello world!'
 ), document.getElementById('root'));
-// let a=10;
-// console.log(a);
-// let c=23;
 //# sourceMappingURL=index01.js.map
