@@ -26,6 +26,11 @@
         <form v-on:submit.prevent="doSth">
             <input type="submit" value="提交">
         </form>
+        <!--//过滤器；过滤器只能用在v-bind和mustache表达式中；过滤器可以串联使用并接受参数-->
+        <div>{{message|filterOne|filterTwo('abc')}}</div>
+        <!--//缩写；v-bind:可缩写为:，v-on:可缩写为@-->
+        <div :title="title">使用了指令缩写</div>
+        <button @click="doSth">使用了指令缩写</button>
     </div>
 
     <script src="../../node_modules/vue/dist/vue.js"></script>

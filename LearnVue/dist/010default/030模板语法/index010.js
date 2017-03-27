@@ -15,6 +15,14 @@ var vm = new Vue({
         doSth: function doSth() {
             console.log('doSth');
         }
+    },
+    filters: {
+        filterOne: function filterOne(value) {
+            return value + ' used filterOne';
+        },
+        filterTwo: function filterTwo(value, addedStr) {
+            return value + ' used filterTwo and added ' + addedStr;
+        }
     }
 });
 //# sourceMappingURL=index010.js.map
