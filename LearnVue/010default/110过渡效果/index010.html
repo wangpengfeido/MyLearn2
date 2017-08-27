@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单元素/组件的过度</title>
+    <link href="index010.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="app">
+        <button @click="toggleA">toggleA</button>
+        <button @click="toggleB">toggleB</button>
+        <button @click="toggleC">toggleC</button>
+        <button @click="toggleD">toggleD</button>
+        <transition name="toggleA">
+            <div class="a" v-if="aIsShow">A:{{aIsShow}}</div>
+        </transition>
+        <transition name="toggleB">
+            <div class="b" v-if="bIsShow">B</div>
+        </transition>
+        <transition name="toggleC" type="animation" leave-to-class="toggleC-leave-to-myself"
+                    :duration="{leave:6000,enter:1000}" @after-leave="cLeaved">
+            <!--过渡和动画同时使用时，可以使用type设置动画结束的监听类型-->
+            <!--可以自定义css类名-->
+            <!--可以用duration来设定动画持续（即DOM移入移出）的时间-->
+            <!--可以设置动画执行的钩子-->
+            <div class="c" v-if="cIsShow">C</div>
+        </transition>
+        <transition name="toggleD" v-bind:css="false" @leave="dLeave"
+                    @enter="dEnter" @before-enter="dBeforeEnter">
+            <!--将css属性设为false可以取消检查css动画-->
+            <div class="d" v-if="dIsShow">D:{{dIsShow}}</div>
+        </transition>
+    </div>
+
+
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <script src="../../dist/010default/110过渡效果/index010.js"></script>
+</body>
+</html>
