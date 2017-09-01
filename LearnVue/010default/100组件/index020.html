@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prop</title>
+</head>
+<body>
+
+    <div id="app">
+        <input type="text" v-model="test">
+        <!--使用短线命名-->
+        <component-one message-one="this is prop"></component-one>
+        <!--动态参数-->
+        <component-one :message-one="test"></component-one>
+        <!--传递字符串1-->
+        <component-one message-one="1"></component-one>
+        <!--传递数字1-->
+        <component-one :message-one="1"></component-one>
+        <component-two :message="test"></component-two>
+    </div>
+
+
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <script src="../../dist/010default/100组件/index020.js"></script>
+
+</body>
+</html>
