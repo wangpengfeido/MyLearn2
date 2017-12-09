@@ -9,7 +9,12 @@ let fs=require('fs');
 //     console.log(data);
 // });
 
+/*
+* fs.readFile(path[, options], callback)
+* 异步读取一个文件的全部内容
+* callback:<Function>    err:<Error>    data:<Buffer>|<String>
+* */
 fs.readFile('./test.png',function (err, data) {
     console.log(data);
-})
+});
 
