@@ -4,7 +4,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
-//webpack 插件是一个具有 apply 属性的 JavaScript 对象。apply 属性会被 webpack compiler 调用，并且 compiler 对象可在整个编译生命周期访问。
+//webpack 插件是一个具有 apply 方法的 JavaScript 对象。apply 方法会被 webpack compiler 调用，并且 compiler 对象可在整个编译生命周期访问。
 
 
 //这是一个插件////////////////////////////////////////////////
