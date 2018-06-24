@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // 因为进程间通信是被允许的, 所以渲染进程可以调用主进程来执行任务
+        // remote模块暴露一些通常只能在主进程中获取到的API
+        const {remote} = require('electron')
+        const {BrowserWindow} = remote
+        // 例如，调用主进程的BrowserWindow来创建页面
+        const win = new BrowserWindow
+        win.loadFile('./index2.html')
+    </script>
+</body>
+</html>
