@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .test {
+            /*设置-webkit-app-region为drag或no-drag来控制可拖拽*/
+            -webkit-app-region: drag;
+            /*禁止用户文本选择来避免拖动时选中文本*/
+            -webkit-user-select: none;
+        }
+
+        .no-drag {
+            -webkit-app-region: no-drag;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="test">
+        <span>dfgfdg</span>
+        <!--注意：可拖拽区域是无法响应点击的-->
+        <button>drag</button>
+        <button class="no-drag">no-drag</button>
+    </div>
+    <!--注意：可拖拽区域将被视为non-client frame, 因此当您右键单击它时, 系统菜单将弹出-->
+    <!--因此，不要在可拖拽区域上使用自定义上下文菜单-->
+</body>
+</html>
