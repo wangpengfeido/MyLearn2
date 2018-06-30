@@ -70,7 +70,7 @@ export class Game extends Component {
             status = `Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
         }
 
-        //创建重复的历史记录
+        // 创建重复的历史记录
         const moves = history.map((step, move) => {
             const desc = move ? `Move #${move}` : 'Game start';
             return (
