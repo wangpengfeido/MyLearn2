@@ -1,0 +1,13 @@
+.app {
+    display: flex;
+}
+
+.app .menu {
+    width: 200px;
+    flex-grow: 0;
+}
+
+.app .content {
+    width: 0;
+    flex-grow: 1;
+}
