@@ -20,6 +20,7 @@ export class App extends Component {
                                 <li><Link to="/fast-start/introducing-jsx">JSX简介</Link></li>
                                 <li><Link to="/fast-start/rending-elements">元素渲染</Link></li>
                                 <li><Link to="/fast-start/ada-components-and-props">组件和props</Link></li>
+                                <li><Link to="/fast-start/aea-state-and-lifecycle">state和生命周期</Link></li>
                             </ul>
                         </li>
                     </ul>

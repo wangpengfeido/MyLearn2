@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {AdaAba} from "./ada-aba";
+import {AdaAca} from "./ada-aca";
 
 // 组件把应用分离成独立的可复用的碎片
 // 组件接受props并决定如何显示ui
@@ -17,14 +19,23 @@ class ElementTwo extends Component{
         );
     }
 }
+// 注意：组件名称必须以大写字母开头
 export class AdaComponentsAndProps extends Component {
     render() {
         // 调用用户自定义属性
-        // 当元素是自定义组件时，jsx把属性作为一个props对象传给组件
+        // 当元素是自定义组件时，jsx把属性作为一个props对象传给组。调用过程如下：
+        // 1.对组件（<ElementOne/>）使用ReactDom.render()
+        // 2.将属性作为props传给组件
+        // 3.组件将render()方法返回的元素返回
+        // 4.更新DOM
         return (
            <div>
                <ElementOne name='one'/>
                <ElementTwo name='two'/>
+               <br/><br/><br/>
+               <AdaAba/>
+               <br/><br/><br/>
+               <AdaAca/>
            </div>
         );
     }
