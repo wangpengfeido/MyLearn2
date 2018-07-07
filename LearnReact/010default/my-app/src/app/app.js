@@ -23,6 +23,8 @@ export class App extends Component {
                                 <li><Link to="/fast-start/aea-state-and-lifecycle">state和生命周期</Link></li>
                                 <li><Link to="/fast-start/afa-handling-event">事件处理</Link></li>
                                 <li><Link to="/fast-start/aga-conditional-rendering">条件渲染</Link></li>
+                                <li><Link to="/fast-start/aha-list-and-keys">列表&keys</Link></li>
+                                <li><Link to="/fast-start/aia-forms">表单</Link></li>
                             </ul>
                         </li>
                     </ul>

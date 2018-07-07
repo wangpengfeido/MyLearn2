@@ -7,6 +7,8 @@ import {AdaComponentsAndProps} from "./ada-components-and-props/ada-components-a
 import {AeaStateAndLifecycle} from "./aea-state-and-lifecycle/aea-state-and-lifecycle";
 import {AfaHandlingEvents} from "./afa-handling-events/afa-handling-events";
 import {AgaConditionalRendering} from "./aga-conditional-rendering/aga-conditional-rendering";
+import {AhaListAndKeys} from "./aha-list-and-keys/aha-list-and-keys";
+import {AiaForms} from "./aia-forms/aia-forms";
 
 export class AaaFastStart extends Component{
     render(){
@@ -19,6 +21,8 @@ export class AaaFastStart extends Component{
                 <Route path='/fast-start/aea-state-and-lifecycle' component={AeaStateAndLifecycle}></Route>
                 <Route path='/fast-start/afa-handling-event' component={AfaHandlingEvents}></Route>
                 <Route path='/fast-start/aga-conditional-rendering' component={AgaConditionalRendering}></Route>
+                <Route path='/fast-start/aha-list-and-keys' component={AhaListAndKeys}></Route>
+                <Route path='/fast-start/aia-forms' component={AiaForms}></Route>
             </div>
         );
     }
