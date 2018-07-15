@@ -25,6 +25,9 @@ export class App extends Component {
                                 <li><Link to="/fast-start/aga-conditional-rendering">条件渲染</Link></li>
                                 <li><Link to="/fast-start/aha-list-and-keys">列表&keys</Link></li>
                                 <li><Link to="/fast-start/aia-forms">表单</Link></li>
+                                <li><Link to="/fast-start/aja-lifting-state-up">状态提升</Link></li>
+                                <li><Link to="/fast-start/aka-composition-vs-inheritance">组合vs继承</Link></li>
+                                <li><Link to="/fast-start/ala-thinking-in-react">react理念</Link></li>
                             </ul>
                         </li>
                     </ul>
