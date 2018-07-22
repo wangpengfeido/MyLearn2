@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './app.css';
 import {Link, Route} from "react-router-dom";
 import {AaaFastStart} from "./aaa-fast-start/aaa-fast-start";
+import {AbaAdvancedGuides} from "./aba-advanced-guides/aba-advanced-guides";
 
 export class App extends Component {
     constructor() {
@@ -30,10 +31,17 @@ export class App extends Component {
                                 <li><Link to="/fast-start/ala-thinking-in-react">react理念</Link></li>
                             </ul>
                         </li>
+                        <li>
+                            <div><Link to="/aba-advanced-guides">高级指引</Link></div>
+                            <ul>
+                                <li><Link to='/aba-advanced-guides/aba-advanced-guides'>可访问性</Link></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div className="content">
                     <Route path='/fast-start' component={AaaFastStart}></Route>
+                    <Route path='/aba-advanced-guides' component={AbaAdvancedGuides}></Route>
                 </div>
             </div>
         );
