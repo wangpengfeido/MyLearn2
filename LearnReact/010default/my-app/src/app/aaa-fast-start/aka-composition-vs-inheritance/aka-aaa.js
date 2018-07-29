@@ -8,6 +8,7 @@ class A extends Component {
     render() {
         // 一些组件不能提前知道它们的子组件是什么。
         // 可以使用children 属性将子元素直接传递到输出。
+        // 注意：当只有一个子代时，props.children是element类型；当有多个子代时，是数组类型
         return (
             <div>
                 {this.props.children}
