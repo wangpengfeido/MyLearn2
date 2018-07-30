@@ -35,6 +35,8 @@ export class App extends Component {
                             <div><Link to="/aba-advanced-guides">高级指引</Link></div>
                             <ul>
                                 <li><Link to='/aba-advanced-guides/aba-advanced-guides'>可访问性</Link></li>
+                                <li><Link to='/aba-advanced-guides/aba-code-splitting'>代码分隔</Link></li>
+                                <li><Link to='/aba-advanced-guides/aia-jsx-in-depth'>深入JSX</Link></li>
                             </ul>
                         </li>
                     </ul>
