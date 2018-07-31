@@ -37,9 +37,11 @@ export class App extends Component {
                                 <li><Link to='/aba-advanced-guides/aaa-accessibility'>可访问性</Link></li>
                                 <li><Link to='/aba-advanced-guides/aba-code-splitting'>代码分隔</Link></li>
                                 <li><Link to='/aba-advanced-guides/aia-jsx-in-depth'>深入JSX</Link></li>
+                                <li><Link to='/aba-advanced-guides/ana-reconciliation'>reconciliation</Link></li>
                                 <li><Link to='/aba-advanced-guides/aoa-refs-and-the-dom'>Refs&Dom</Link></li>
                                 <li><Link to='/aba-advanced-guides/aqa-static-type-checking'>静态类型检查</Link></li>
                                 <li><Link to='/aba-advanced-guides/asa-typechecking-with-proptypes'>使用PropTypes进行类型检查</Link></li>
+                                <li><Link to='/aba-advanced-guides/ata-uncontrolled-component'>非受控组件</Link></li>
                             </ul>
                         </li>
                     </ul>
