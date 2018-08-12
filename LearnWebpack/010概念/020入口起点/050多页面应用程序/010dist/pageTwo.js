@@ -56,7 +56,7 @@
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// Promise = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		"app": 0
+/******/ 		"pageTwo": 0
 /******/ 	};
 /******/
 /******/ 	var deferredModules = [];
@@ -147,22 +147,22 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/app.js","vendor"]);
+/******/ 	deferredModules.push(["./src/page-two.js","common"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
+/***/ "./src/page-two.js":
+/*!*************************!*\
+  !*** ./src/page-two.js ***!
+  \*************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _thirdLib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./thirdLib */ \"./src/thirdLib.js\");\nconsole.log('this is app');\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _thirdLib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./thirdLib */ \"./src/thirdLib.js\");\n\r\n\r\nconsole.log('this is page two');\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/page-two.js?");
 
 /***/ })
 

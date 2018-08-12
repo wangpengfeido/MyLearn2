@@ -1,5 +1,3 @@
-/**
- * Created by dell on 2017/9/2.
- */
+console.log('this is vendors');
 
 import './thirdLib';
