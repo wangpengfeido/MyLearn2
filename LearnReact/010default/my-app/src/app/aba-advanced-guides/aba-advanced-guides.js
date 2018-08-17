@@ -9,6 +9,8 @@ import {AqaStaticTypeChecking} from "./aqa-static-type-checking/aqa-static-type-
 import {AoaRefsAndTheDom} from "./aoa-refs-and-the-dom/aoa-refs-and-the-dom";
 import {AtaUnControlledComponent} from "./ata-uncontrolled-component/ata-uncontrolled-component";
 import {AnaReconciliation} from "./ana-reconciliation/ana-reconciliation";
+import {AcaContext} from "./aca-context/aca-context";
+import {AgaHigherOrderComponents} from "./aga-higher-order-components/aga-higher-order-components";
 
 
 export class AbaAdvancedGuides extends Component {
@@ -17,6 +19,8 @@ export class AbaAdvancedGuides extends Component {
             <div>
                 <Route path="/aba-advanced-guides/aaa-accessibility" component={AaaAccessibility}/>
                 <Route path="/aba-advanced-guides/aba-code-splitting" component={AbaCodeSplitting}/>
+                <Route path="/aba-advanced-guides/aca-context" component={AcaContext}/>
+                <Route path="/aba-advanced-guides/aga-higher-order-components" component={AgaHigherOrderComponents}/>
                 <Route path="/aba-advanced-guides/aia-jsx-in-depth" component={AiaJsxInDepth}/>
                 <Route path="/aba-advanced-guides/ana-reconciliation" component={AnaReconciliation}/>
                 <Route path="/aba-advanced-guides/aoa-refs-and-the-dom" component={AoaRefsAndTheDom}/>
