@@ -36,6 +36,8 @@ export class App extends Component {
                             <ul>
                                 <li><Link to='/aba-advanced-guides/aaa-accessibility'>可访问性</Link></li>
                                 <li><Link to='/aba-advanced-guides/aba-code-splitting'>代码分隔</Link></li>
+                                <li><Link to='/aba-advanced-guides/aca-context'>context</Link></li>
+                                <li><Link to='/aba-advanced-guides/aga-higher-order-components'>高阶组件</Link></li>
                                 <li><Link to='/aba-advanced-guides/aia-jsx-in-depth'>深入JSX</Link></li>
                                 <li><Link to='/aba-advanced-guides/ana-reconciliation'>reconciliation</Link></li>
                                 <li><Link to='/aba-advanced-guides/aoa-refs-and-the-dom'>Refs&Dom</Link></li>
