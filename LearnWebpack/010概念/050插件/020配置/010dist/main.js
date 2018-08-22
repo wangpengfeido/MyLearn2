@@ -77,36 +77,23 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "./010dist/";
+/******/ 	__webpack_require__.p = "";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/01.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/content01.js":
-/*!**************************!*\
-  !*** ./src/content01.js ***!
-  \**************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/01.js":
+/*!*******************!*\
+  !*** ./src/01.js ***!
+  \*******************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/**\r\n * Created by dell on 2017/9/2.\r\n */\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n    console.log('this is content01');\r\n});\n\n//# sourceURL=webpack:///./src/content01.js?");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _content01__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./content01 */ \"./src/content01.js\");\n/**\r\n * Created by dell on 2017/9/2.\r\n */\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("console.log('this is 01')\r\n\n\n//# sourceURL=webpack:///./src/01.js?");
 
 /***/ })
 

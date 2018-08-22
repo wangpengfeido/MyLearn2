@@ -1,16 +1,19 @@
-/**
- * Created by dell on 2017/9/2.
- */
 const path = require('path');
 const webpack = require('webpack');
 
-//webpack 插件是一个具有 apply 方法的 JavaScript 对象。apply 方法会被 webpack compiler 调用，并且 compiler 对象可在整个编译生命周期访问。
+// 这个是原来的旧例子，查看新例子请查看后面的../020
+
+// 插件目的在于解决 loader 无法实现的其他事。
+
+//webpack 插件是一个具有 apply 方法的 JavaScript 对象。
+// apply 方法会被 webpack compiler 调用，并且 compiler 对象可在整个编译生命周期访问。
 
 
 //这是一个插件////////////////////////////////////////////////
 function ConsoleLogOnBuildWebpackPlugin() {
 
 }
+
 ConsoleLogOnBuildWebpackPlugin.prototype.apply = function (compiler) {
     compiler.plugin('run', function (compiler, callback) {
         console.log("webpack 构建过程开始！！！");
@@ -41,7 +44,8 @@ module.exports = {
                 callback();
             });
         },
-    ]
-}
-;
+    ],
+    mode: 'development',
+};
 
+// TODO
