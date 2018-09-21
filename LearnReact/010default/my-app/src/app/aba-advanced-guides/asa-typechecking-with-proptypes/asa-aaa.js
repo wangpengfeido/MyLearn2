@@ -42,7 +42,7 @@ class Three extends Component {
 class Four extends Component {
 
     // 使用defaultProps指定属性的默认值
-    // defaultProps也接受属性类型检查
+    // defaultProps也接受propTypes的属性类型检查
     static defaultProps = {
         myName: 'this is default name',
     }

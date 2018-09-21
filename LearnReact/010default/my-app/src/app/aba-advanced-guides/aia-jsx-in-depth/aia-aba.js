@@ -23,7 +23,8 @@ function Two() {
 
 function Three() {
     // 不给属性传值默认为true
-    // 不建议这样使用，因为会与ES6对象简洁表示法混淆
+
+    // 不建议使用类似disabled={true}，因为会与ES6对象简洁表示法混淆(disabled={true:true})
     return (
         <div>
             (3)
@@ -33,15 +34,41 @@ function Three() {
     );
 }
 
+function Four() {
+
+    function ComponentOne(props) {
+        return (
+            <div>
+                <div>{props.a}</div>
+                <div>{props.b}</div>
+            </div>
+        )
+    }
+
+    const temp = {a: 'aaa', b: 'bbb'};
+
+    // 可以用扩展操作符"..."传递一个对象（可以是props对象）来一次传递多个属性
+    // 这对扩展属性非常有用，但会传递不相关属性，使得代码混乱。所以要谨慎使用
+    return (
+        <div>
+            (4)
+            <ComponentOne {...temp}/>
+        </div>
+    )
+}
+
 export class AiaAba extends Component {
     render() {
         return (
             <div>
+                <h3>属性</h3>
                 <One/>
                 <br/><br/><br/>
                 <Two/>
                 <br/><br/><br/>
                 <Three/>
+                <br/><br/><br/>
+                <Four/>
             </div>
         );
     }
