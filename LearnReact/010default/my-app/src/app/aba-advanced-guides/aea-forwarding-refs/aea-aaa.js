@@ -2,9 +2,13 @@ import React, {Component} from 'react';
 
 /**
  * 转发refs是一种技术：将ref从组件传递到它的子代
- * 这种技术在高阶组件中十分有用
+ * 这种技术在某些类别的组件中，特别是可重用的组件库/高阶组件中十分有用
  */
 
+/**
+ * 我的理解：转发refs即改变ref“属性”的行为，使其不再赋它在的组件/DOM本身，而是赋用户指定的组件/DOM
+ * 另外，ref是可以用普通props传递的
+ */
 
 class WrappedOne extends Component {
     render() {
