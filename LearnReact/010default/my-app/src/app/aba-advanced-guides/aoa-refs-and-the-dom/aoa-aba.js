@@ -8,6 +8,7 @@ class One extends Component {
 
     handleFocusButtonClick = () => {
         // 当 ref 属性被用于一个普通的 HTML 元素时，React.createRef() 将接收底层 DOM 元素作为它的 current 属性以创建 ref 。
+        // React 会在组件加载时将 DOM 元素传入 current 属性，在卸载时则会改回 null。
         // ref 的更新会发生在componentDidMount 或 componentDidUpdate 生命周期钩子之前。
         console.log(this.refInput.current);
         this.refInput.current.focus();
@@ -72,7 +73,7 @@ function Three() {
     const refInput=React.createRef();
     return (
         <div>
-            {/* ref={refExampleTwo}*/}
+            {/* 如果在ExampleTwo上使用 ref={refExampleTwo} 是不可以的*/}
             <ExampleTwo/>
             <input ref={refInput}/>
         </div>

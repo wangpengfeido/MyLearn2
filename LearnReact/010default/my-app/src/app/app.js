@@ -37,12 +37,18 @@ export class App extends Component {
                                 <li><Link to='/aba-advanced-guides/aaa-accessibility'>可访问性</Link></li>
                                 <li><Link to='/aba-advanced-guides/aba-code-splitting'>代码分隔</Link></li>
                                 <li><Link to='/aba-advanced-guides/aca-context'>context</Link></li>
+                                <li><Link to='/aba-advanced-guides/aea-forwarding-refs'>转发refs</Link></li>
+                                <li><Link to='/aba-advanced-guides/afa-fragments'>fragments</Link></li>
                                 <li><Link to='/aba-advanced-guides/aga-higher-order-components'>高阶组件</Link></li>
                                 <li><Link to='/aba-advanced-guides/aia-jsx-in-depth'>深入JSX</Link></li>
+                                <li><Link to='/aba-advanced-guides/aka-protals'>protals</Link></li>
                                 <li><Link to='/aba-advanced-guides/ana-reconciliation'>reconciliation</Link></li>
                                 <li><Link to='/aba-advanced-guides/aoa-refs-and-the-dom'>Refs&Dom</Link></li>
+                                <li><Link to='/aba-advanced-guides/apa-render-props'>Render Props</Link></li>
                                 <li><Link to='/aba-advanced-guides/aqa-static-type-checking'>静态类型检查</Link></li>
-                                <li><Link to='/aba-advanced-guides/asa-typechecking-with-proptypes'>使用PropTypes进行类型检查</Link></li>
+                                <li>
+                                    <Link to='/aba-advanced-guides/asa-typechecking-with-proptypes'>使用PropTypes进行类型检查</Link>
+                                </li>
                                 <li><Link to='/aba-advanced-guides/ata-uncontrolled-component'>非受控组件</Link></li>
                             </ul>
                         </li>

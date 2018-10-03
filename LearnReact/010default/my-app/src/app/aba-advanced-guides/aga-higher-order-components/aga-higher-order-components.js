@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import {AgaAaa} from "./aga-aaa";
 import {AgaAba} from "./aga-aba";
 import {AgaAca} from "./aga-aca";
+import {AgaAda} from "./aga-ada";
+import {AgaAea} from "./aga-aea";
+import {AgaAfa} from "./aga-afa";
+import {AgaAga} from "./aga-aga/aga-aga";
+import {AgaAha} from "./aga-aha";
 
 // 高阶组件是react中对组件逻辑进行重用的技术
 // 高阶组件本身不是react api，它只是一种模式，这种模式是由react自身的组合性质必然产生的
@@ -18,6 +23,17 @@ export class AgaHigherOrderComponents extends Component {
                 <AgaAba/>
                 <br/><br/><br/>
                 <AgaAca/>
+                <br/><br/><br/>
+                <AgaAda/>
+                <br/><br/><br/>
+                <AgaAea/>
+                <br/><br/><br/>
+                <AgaAfa/>
+                <br/><br/><br/>
+                <AgaAga/>
+                <br/><br/><br/>
+                <AgaAha/>
+                <br/><br/><br/>
             </div>
         );
     }

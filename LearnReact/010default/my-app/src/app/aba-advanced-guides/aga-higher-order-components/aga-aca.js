@@ -46,7 +46,8 @@ export class AgaAca extends Component {
     render() {
         return (
             <div>
-                <EnhancedComponent data={{id: 1, name: '张三'}}/>
+                <h3>约定：将不相关的props属性传递给包裹组件</h3>
+                <EnhancedComponent data={{id: 1, name: '张三'}} extraProp="this is extra prop"/>
             </div>
         )
     }

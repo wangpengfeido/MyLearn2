@@ -67,6 +67,7 @@ function Four() {
 
 function Five() {
     // 子代可以是任何元素，只要该组件在 React 渲染前将其转换成 React 能够理解的东西。
+    // 也可以是一个函数，这在扩展JSX可以使用
     return (
         <div>
             (5)
@@ -117,6 +118,7 @@ export class AiaAca extends Component {
     render() {
         return (
             <div>
+                <h3>子代</h3>
                 <One/>
                 <br/><br/><br/>
                 <Two/>

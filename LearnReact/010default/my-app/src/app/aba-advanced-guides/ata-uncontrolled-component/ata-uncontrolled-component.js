@@ -35,7 +35,7 @@ class Two extends Component {
         this.relFileInput = React.createRef();
     }
 
-    // <input type="file" /> 始终是一个不受控制的组件，因为它的值只能由用户设置
+    // <input type="file" /> 始终是一个不受控制的组件，因为它的值只能由用户设置，而不能由程序控制
 
     handleSubmit = (event) => {
         event.preventDefault();
