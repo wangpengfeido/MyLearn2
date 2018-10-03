@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class与Style绑定</title>
+</head>
+<body>
+
+    <div id="app">
+        <!--'v-bind:style'绑定一个对象。Css属性名用驼峰式或短横线式-->
+        <div v-bind:style="{color:styles.color,backgroundColor:styles.backgroundColor,'font-size':styles.fontSize}">test</div>
+        <br/>
+        <!--也可以直接绑定一个对象-->
+        <div v-bind:style="styles">test</div>
+        <br/>
+        <!--也可以绑定一个计算属性-->
+        <div v-bind:style="computedStyles">test</div>
+        <br/>
+
+        <!--也可以绑定一个数组-->
+        <div v-bind:style="[styles,{'fontWeight':'bolder'}]">test array</div>
+        <br/>
+
+        <!--使用需要添加浏览器引擎前缀的 CSS 属性时，会自动添加-->
+        <div v-bind:style="{transform:'translateX(20px)'}">test</div>
+        <br/>
+
+        <!--多重值。可以为style指定多个值。优先渲染从后到前第一个支持的值-->
+        <div v-bind:style="{display:['-webkit-box','-ms-flexbox','flex']}">test</div>
+        <br/>
+    </div>
+
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <script src="./index010.js"></script>
+</body>
+</html>

@@ -1,6 +1,3 @@
-/**
- * Created by dell on 2017/8/27.
- */
 
 const store = new Vuex.Store({
     state: {

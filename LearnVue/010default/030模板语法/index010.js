@@ -1,6 +1,3 @@
-/**
- * Created by dell on 2017/3/19.
- */
 let vm = new Vue({
     el: '#app',
     data: {
