@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表渲染</title>
+</head>
+<body>
+
+    <div id="app">
+        <div>
+            <ul>
+                <!--当不带 key 时，采用就地复用原则，改变顺序时不会移动DOM，而是复用此处的DOM-->
+                <!--使用key后，具有相同key的DOM会被复用-->
+                <li v-for="(item,index) in list1" :key="index">{{item.message}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <script src="./index010.js"></script>
+</body>
+</html>
