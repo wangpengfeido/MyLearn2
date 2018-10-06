@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>监听事件</title>
+    <link href="./index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div id="app">
+        <div>count:{{count}}</div>
+        <br/>
+
+        <!--Vue 提供了多种事件修饰符-->
+
+        <div>
+            <!--事件修饰符-->
+
+            <!--.stop 相当于调用event.stopPropagation，阻止事件传播-->
+            <div class="background-gray" v-on:click="count++">
+                <button v-on:click.stop="addCount()">add count</button>
+            </div>
+
+            <!--.prevent 相当于调用event.preventDefault，阻止事件默认行为-->
+            <div>
+                <a href="https://www.baidu.com" v-on:click.prevent="addCount()">add count</a>
+            </div>
+
+            <!--.self 只有当事件是自身触发时有效（子元素触发无效）-->
+            <div class="background-gray" v-on:click.self="addCount()">
+                <button>add count</button>
+            </div>
+
+            <!--.capture 相当于addEventListener的useCapture选项。使用事件捕获-->
+            <div class="background-gray" v-on:click.capture.stop="count++">
+                <button v-on:click="addCount()">add count</button>
+            </div>
+
+            <!--.once 相当addEventListener的once选项。事件只触发一次-->
+            <!-- 它可以使用在组件事件上-->
+            <div>
+                <button v-on:click.once="addCount()">add count once</button>
+            </div>
+
+            <!--.passive 相当于addEventListener的passive选项。告诉浏览器不会阻止事件的默认行为-->
+            <div>
+                <button v-on:click.prevent="addCount()">add count passive</button>
+                <!--注意：.passive和.prevent不能同时使用-->
+            </div>
+
+            <!--注意：修饰符的使用顺序是有影响的-->
+            <!--如：v-on:click.prevent.self 会阻止所有的点击，而 v-on:click.self.prevent 只会阻止对元素自身的点击。-->
+        </div>
+        <br/>
+
+        <div>
+            <!--按键修饰符：使用'.keyCode'的格式，部分keyCode有别名-->
+            <!--别名：.enter/.tab/.delete/.esc/.space/.up/.down/.left/.right-->
+            <div>
+                enter:
+                <input v-on:keyup.13="addCount()">
+                <input v-on:keyup.enter="addCount()">
+            </div>
+
+            <!--可以通过Vue.config.keyCodes自定义别名-->
+            <div>
+                f1:
+                <input v-on:keydown.prevent.f1="addCount()">
+            </div>
+
+            <!--可以将KeyboardEvent.key暴露的有效按键名转换为kebab-case作为修饰符-->
+            <div>
+                page down:
+                <input v-on:keyup.page-down="addCount()">
+            </div>
+        </div>
+        <br/>
+
+        <div>
+            <!--系统修饰键 -->
+
+            <!--修饰键有：.ctrl/.alt/.shift/.meta。.meta指win徽标、macOS command、Sun宝石键等-->
+            <div>
+                ctrl+enter:
+                <input @keyup.ctrl.enter="addCount()">
+                <!--注意：只有在ctrl按下时抬起其他键才会触发keyup事件，而ctrl抬起不会触发。如果要ctrl触发，可以使用keyup.17-->
+            </div>
+
+            <!--.exact 修饰符表示精确控制，即按下多余的键时不会触发。例如ctrl+enter触发的事件不能由ctrl+alt+enter触发-->
+            <div>
+                ctrl+enter(exact):
+                <input @keyup.ctrl.exact.enter="addCount()">
+            </div>
+
+            <!--鼠标按钮修饰符，限定鼠标按键：.left/.right/.middle-->
+            <div>
+                <button @click.right.prevent="addCount()">add count</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <script src="./index010.js"></script>
+</body>
+</html>

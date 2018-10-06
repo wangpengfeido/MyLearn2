@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单输入绑定</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <div>
+            <!--.lazy 修饰符，将input事件触发同步改为change事件触发同步-->
+            <h3>.lazy</h3>
+            <input v-model="textOne">
+            <input v-model.lazy="textOne">
+            <div>{{textOne}}</div>
+        </div>
+        <br/>
+
+        <div>
+            <!--.number修饰符，返回parseFloat()的值，如果不能被转换则返回原值-->
+            <!--注意：type="number"与之不同的是，type="number"返回的仍然是字符串而不是数值-->
+            <h3>.number</h3>
+            <!--<input v-model="number">-->
+            <!--<input v-model="number" type="number">-->
+            <input v-model.number="number">
+            <div>{{number}}</div>
+        </div>
+        <br/>
+
+        <div>
+            <!--.trim 修饰符，过滤首尾空白字符-->
+            <h3>.trim</h3>
+            <!--<input v-model="textTwo">-->
+            <input v-model.trim="textTwo">
+            <div>{{textTwo}}</div>
+        </div>
+        <br/>
+    </div>
+
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <script src="./index010.js"></script>
+</body>
+</html>
