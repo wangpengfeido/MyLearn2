@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件基础</title>
+</head>
+<body>
+
+    <div id="app">
+        <div>
+            <div>
+                <label><input type="radio" value="one" v-model="currentComponent">one</label>
+                <label><input type="radio" value="two" v-model="currentComponent">two</label>
+            </div>
+            <!--在<component>元素（也可以是其他元素）上使用 is 特性来动态使用一个组件-->
+            <!--is的值可以是：一个已注册组件的名字，或一个组件的选项对象-->
+            <component :is="currentComponent"></component>
+        </div>
+        <br/>
+
+
+    </div>
+
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <script src="./index010.js"></script>
+</body>
+</html>
