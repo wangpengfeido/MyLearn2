@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prop</title>
+</head>
+<body>
+
+    <div id="app">
+        <div>
+            <!--可以给prop传入静态的值-->
+            <component-one
+                    :string-prop="'hello'"
+                    :number-prop="11"
+                    :boolean-prop="true"
+                    :array-prop="[1,2,3]"
+                    :object-prop="{hello: 'world'}"></component-one>
+        </div>
+        <br/>
+
+        <div>
+            <!--可以给prop传入动态的值，使用v-bind-->
+            <component-one
+                    :string-prop="post.stringProp"
+                    :number-prop="post.numberProp"
+                    :boolean-prop="post.booleanProp"
+                    :array-prop="post.arrayProp"
+                    :object-prop="post.objectProp"
+                    :my-class-prop="post.myClassProp"></component-one>
+        </div>
+        <br/>
+
+        <div>
+            <!--可以使用不带参数的v-bind一次性传入多个prop，它与上面的形式等价-->
+            <!--注意：对象的属性使用的是camelCase-->
+            <component-one v-bind="post"></component-one>
+        </div>
+        <br/>
+
+        <div>
+            <!--如果传入的数据类型与给的数据类型不一致，将给出警告-->
+            <!--<component-one-->
+            <!--:string-prop="true"-->
+            <!--:boolean-prop="'234'"></component-one>-->
+        </div>
+        <br/>
+    </div>
+
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <script src="./index010.js"></script>
+</body>
+</html>

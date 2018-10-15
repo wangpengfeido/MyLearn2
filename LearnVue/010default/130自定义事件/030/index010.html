@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义事件</title>
+</head>
+<body>
+
+    <div id="app">
+        <div>
+            <!--如果想在一个组件上监听原生事件，使用 .native 修饰符。事件监听绑定到根元素上-->
+            <component-one @click.native="handleEvent($event)"></component-one>
+        </div>
+        <br/>
+
+        <div>
+            <!--这里，因为组件的根元素是label，所以对focus的事件监听失效-->
+            <component-one @focus.native="handleEvent($event)"></component-one>
+            <!--这里，focus是组件的事件监听，它又被绑定到组件内部的input上-->
+            <component-two @focus="handleEvent($event)" v-model="value"></component-two>
+        </div>
+        <br/>
+
+    </div>
+
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <script src="./index010.js"></script>
+</body>
+</html>
