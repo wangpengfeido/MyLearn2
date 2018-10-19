@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表渲染</title>
+</head>
+<body>
+
+    <div id="app">
+        <div>
+            <ul>
+                <li v-for="(item,index) in list1">{{item.value}}</li>
+            </ul>
+        </div>
+        <div>
+            <button @click="mutation()">变异方法</button>
+        </div>
+        <div>
+            <button @click="replace()">替换数组</button>
+        </div>
+        <div>
+            <button @click="changeItem()">设置某一项</button>
+        </div>
+        <div>
+            <button @click="changeLength()">改变length</button>
+        </div>
+    </div>
+
+    <script src="../../../node_modules/vue/dist/vue.js"></script>
+    <script src="./index010.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件渲染</title>
+</head>
+<body>
+
+    <div id="app">
+        <div>
+            <span>show1:</span>
+            <input type="radio" v-bind:value="true" v-model="show1">
+            <input type="radio" v-bind:value="false" v-model="show1">
+        </div>
+        <div>
+            <span>show2:</span>
+            <input type="radio" v-bind:value="0" v-model="show2">
+            <input type="radio" v-bind:value="1" v-model="show2">
+            <input type="radio" v-bind:value="2" v-model="show2">
+        </div>
+        <br/>
+
+        <!--使用'v-if'/'v-else'进行条件渲染-->
+        <div>
+            <span v-if="show1">yes</span>
+            <span v-else="show1">no</span>
+        </div>
+        <br/>
+
+        <!--在 <template> 元素上使用 v-if 条件渲染分组。<template>不会出现在渲染结果中-->
+        <div>
+            <template v-if="show1">
+                <div>a</div>
+                <div>b</div>
+                <div>c</div>
+            </template>
+        </div>
+
+        <!--'v-else'表示else块-->
+        <div>
+            <span v-if="show1">yes</span>
+            <span v-else="show1">no</span>
+        </div>
+        <br/>
+
+        <!--'v-else-if'表示else-if块-->
+        <div>
+            <span v-if="show2===0">0</span>
+            <span v-else-if="show2===1">1</span>
+            <span v-else>else</span>
+        </div>
+    </div>
+
+    <script src="../../../node_modules/vue/dist/vue.js"></script>
+    <script src="./index010.js"></script>
+</body>
+</html>

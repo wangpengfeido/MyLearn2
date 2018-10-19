@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义事件</title>
+</head>
+<body>
+
+    <div id="app">
+        <div>
+            <component-one :count="post.count" @update:count="post.count=$event"></component-one>
+            <!--.sync 是 @update:xxx="yyy=$event" 的缩写-->
+            <!-- 可以利用它方便地完成类似于双向绑定的效果-->
+            <component-one :count.sync="post.count"></component-one>
+        </div>
+        <br/>
+
+        <div>
+            <!--.sync也可以用在同时设置多个prop的时候-->
+            <component-one v-bind.sync="post"></component-one>
+            <!--注意：但是，.sync不能用在v-bind的值是对象字面量时-->
+        </div>
+    </div>
+
+    <script src="../../../node_modules/vue/dist/vue.js"></script>
+    <script src="./index010.js"></script>
+</body>
+</html>

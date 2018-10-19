@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单输入绑定</title>
+</head>
+<body>
+
+    <div id="app">
+        <!--使用v-model指令在表单<input><textarea><select>元素上创建双向绑定-->
+        <!--注意：v-model会忽略表单原生的value/checked/selected初始值-->
+        <!--注意：使用输入法时v-model不会在输入过程中更新。如果要处理该过程可自行使用input事件-->
+
+        <div>
+            <h3>文本</h3>
+            <input v-model="text">
+            <div>{{text}}</div>
+        </div>
+        <br/>
+
+        <div>
+            <h3>多行文本</h3>
+            <textarea v-model="textareaText"></textarea>
+            <!--注意：插值方式设置textarea的值不再有效-->
+            <div>{{textareaText}}</div>
+        </div>
+        <br/>
+
+        <div>
+            <h3>复选框</h3>
+            <div>
+                <!--当绑定的数据初始值不是数组，Vue默认为其设置的值为true/false，value不生效-->
+                <!--比较是否选中的方式为Boolean(model值)===true/false，比如设置非0数字或非空字符串都认为是选中，但再次选择会改为true-->
+                <label><input type="checkbox" v-model="oneCheckbox" :value="1">1</label>
+                <div>{{oneCheckbox}}</div>
+            </div>
+            <div>
+                <!--当绑定数据的初始值是数组，Vue为其设置选中者value数组-->
+                <!--比较是否选中的方式为'=='，比如设置字符串'2'，数值2会被选中('2'==2)，但true不会被选中('2'!=true)-->
+                <label><input type="checkbox" v-model="multiCheckbox" :value="1">1</label>
+                <label><input type="checkbox" v-model="multiCheckbox" :value="2">2</label>
+                <label><input type="checkbox" v-model="multiCheckbox" :value="true">true</label>
+                <div>{{multiCheckbox}}</div>
+            </div>
+        </div>
+        <br/>
+
+        <div>
+            <h3>单选按钮</h3>
+            <div>
+                <!--比较是否选中的方式为'=='-->
+                <label><input type="radio" v-model="radio" :value="1">1</label>
+                <label><input type="radio" v-model="radio" :value="2">2</label>
+            </div>
+            <div>{{radio}}</div>
+        </div>
+        <br/>
+
+        <div>
+            <h3>选择框</h3>
+            <div>
+                <!--单选时，v-model绑定到一个值-->
+                <!--比较是否选中的方式为'=='-->
+                <div>
+                    <select v-model="oneSelect">
+                        <!--建议提供一个未选中选项，这样能避免ios上初始为非列表中的值时出现无法选择问题-->
+                        <option disabled value="">请选择</option>
+                        <option :value="1">1</option>
+                        <option :value="2">2</option>
+                        <option :value="3">3</option>
+                    </select>
+                </div>
+                <div>{{oneSelect}}</div>
+            </div>
+            <div>
+                <!--多选时，v-model绑定到一个数组-->
+                <!--比较是否选中的方式为'=='-->
+                <div>
+                    <select multiple v-model="multiSelect">
+                        <option :value="1">1</option>
+                        <option :value="2">2</option>
+                        <option :value="3">3</option>
+                    </select>
+                </div>
+                <div>{{multiSelect}}</div>
+            </div>
+            <div>
+                <!--使用v-for渲染动态选项-->
+                <div>
+                    <select v-model="oneSelect">
+                        <option disabled value="">请选择</option>
+                        <option v-for="item of selectOptions" :value="item.value">{{item.text}}</option>
+                    </select>
+                    <div>{{oneSelect}}</div>
+                </div>
+            </div>
+        </div>
+        <br/>
+    </div>
+
+    <script src="../../../node_modules/vue/dist/vue.js"></script>
+    <script src="./index010.js"></script>
+</body>
+</html>

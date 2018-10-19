@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模版定义的替代品</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <div>
+            <!--inline-template 特性表示组件将其内容作为模版，而不是分发内容-->
+            <!--这样的优点是模版更加灵活，缺点是模版作用域变得难以理解-->
+            <!--所以尽量不要这么做-->
+            <component-one inline-template>
+                <div>this is template one {{value}}</div>
+            </component-one>
+        </div>
+        <br/>
+
+        <div>
+            <!--使用script type="text/x-template"定义模版，然后使用id引用模版-->
+            <!--尽量不要这么做，因为会使组件的定义分离开-->
+            <script type="text/x-template" id="component-two">
+                <div>this is component two {{value}}</div>
+            </script>
+            <component-two></component-two>
+        </div>
+        <br/>
+    </div>
+
+    <script src="../../../node_modules/vue/dist/vue.js"></script>
+    <script src="./index010.js"></script>
+</body>
+</html>

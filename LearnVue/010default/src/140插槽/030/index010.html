@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插槽</title>
+</head>
+<body>
+
+    <div id="app">
+        <div>
+            <!--插槽内容的作用域是组件外的父作用域，而非组件的子作用域-->
+            <component-one>
+                <div>{{value}}</div>
+            </component-one>
+            <!--父组件模板的所有东西都会在父级作用域内编译；子组件模板的所有东西都会在子级作用域内编译。-->
+        </div>
+        <br/>
+
+        <div>
+            <component-two>
+                <!--使用slot-scope特性，从子组件中获取绑定到slot上的数据-->
+                <template slot-scope="slotProps">
+                    <div>name is {{slotProps.userName}}</div>
+                    <div>phone is {{slotProps.userPhone}}</div>
+                </template>
+            </component-two>
+            <br/>
+            <component-two>
+                <!--在支持ES2015的环境中，slot-scope可使用解构语法-->
+                <div slot-scope="{userName,userPhone}">
+                    <div>name is {{userName}}</div>
+                    <div>phone is {{userPhone}}</div>
+                </div>
+            </component-two>
+        </div>
+        <br/>
+    </div>
+
+    <script src="../../../node_modules/vue/dist/vue.js"></script>
+    <script src="./index010.js"></script>
+</body>
+</html>
