@@ -1,6 +1,4 @@
-/**
- * Created by dell on 2017/3/29.
- */
+
 const EventEmitter = require('events').EventEmitter;
 
 const emitter = new EventEmitter();
