@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello world</title>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=XEZVimPiKhQr1KNaktlwBMx9Z89Vg03x"></script>
+</head>
+<body>
+    <div id="map-container" style="width:500px;height: 500px;"></div>
+
+    <script>
+        var map=new BMap.Map("map-container");  //创建地图实例
+        var point=new BMap.Point(119.38,36.73);    //创建点
+        map.centerAndZoom(point,15);             //初始化地图
+        map.addControl(new BMap.NavigationControl());
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index01</title>
+    <link href="../../node_modules/quill/dist/quill.core.css" type="text/css" rel="stylesheet"></link>
+    <link href="../../node_modules/quill/dist/quill.snow.css" type="text/css" rel="stylesheet"></link>
+</head>
+<body>
+    <div id="quill"></div>
+
+    <script src="../../node_modules/quill/dist/quill.js"></script>
+    <script>
+        var quill = new Quill('#quill', {
+            modules:{toolbar:true},
+            theme:'snow'
+        });
+    </script>
+</body>
+</html>

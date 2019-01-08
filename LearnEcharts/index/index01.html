@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个echarts图表</title>
+    <script src="../node_modules/echarts/dist/echarts.js"></script>
+</head>
+<body>
+
+    <div id="main" style="width: 600px;height: 400px;"></div>
+
+
+    <script>
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {
+            title: {
+                text: 'title->text'
+            },
+            tooltip: {},
+            legend: {
+                data: ['series->name']
+            },
+            xAxis: {
+                data: ['xAxis->data1', 'xAxis->data2', 'xAxis->data3', 'xAxis->data4',]
+            },
+            yAxis: {},
+            series: [{
+                name: 'series->name',
+                type: 'bar',
+                data: [1, 2, 3, 4, 5]
+            }]
+        };
+
+        myChart.setOption(option);
+    </script>
+
+</body>
+</html>
