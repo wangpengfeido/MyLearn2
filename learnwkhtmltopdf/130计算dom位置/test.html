@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta content="never" name="referrer">
+  <title>
+    title
+  </title>
+  <style>
+    .test-box {
+      width: 300px;
+      height: 500px;
+      background-color: red;
+      margin: 10px;
+    }
+
+    .page-break-after {
+      page-break-after: always;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="test-box page-break-after"></div>
+  <div class="test-box"></div>
+
+  <div id="get-position"></div>
+
+  <script>
+    var dom_getPosition = document.getElementById('get-position');
+
+    dom_getPosition.innerText = dom_getPosition.offsetTop;
+  </script>
+</body>
+
+</html>
