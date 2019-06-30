@@ -1,2 +1,2 @@
-console.log('hello world!')
-phantom.exit()
+// console.log('hello world!');
+phantom.exit();
