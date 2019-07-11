@@ -1,0 +1,14 @@
+<template>
+    <div>
+        <text>这里是自定义组件</text>
+    </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+</style>

@@ -1,0 +1,48 @@
+<template>
+  <div class="daa-list">
+    <text>list</text>
+    <text>list的特点：1.性能更高；2.有滚动条</text>
+    <text>注意：1.相同type的list-item应该具有相同dom结构；2.应该减少list-item中dom层级；3.划分为尽可能小的list-item;4.尽量关闭scrollpage；</text>
+    <text>scrollpage:在滚动list时，是否等父级的scroll都滚动到头后再开始滚动。实际实验中scrollpage开启导致list显示不出，和list不指定宽度表现一致</text>
+    <div class="section">
+      <text>一个list</text>
+      <list class="list1">
+        <list-item type="a"><text>111</text></list-item>
+        <list-item type="a"><text>11er1</text></list-item>
+        <list-item type="a"><text>11sf1</text></list-item>
+        <list-item type="a"><text>1sd11</text></list-item>
+        <list-item type="a"><text>1ad11</text></list-item>
+        <list-item type="a"><text>1we11</text></list-item>
+        <list-item type="a"><text>1er11</text></list-item>
+        <list-item type="a"><text>1vs11</text></list-item>
+        <list-item type="a"><text>1dfg1</text></list-item>
+        <list-item type="a"><text>1sdf1</text></list-item>
+        <list-item type="a"><text>1wer1</text></list-item>
+        <list-item type="a"><text>1gfd1</text></list-item>
+      </list>
+    </div>
+    <div class="section">
+      <a class="button" href="/Pages/Tutorial/DaaList/CeilingItem">吸顶元素</a>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data: {
+  }
+}
+</script>
+
+<style>
+@import "../../../Common/common.css";
+
+.daa-list {
+  flex-direction: column;
+}
+.list1 {
+  height: 200px;
+  background-color: red;
+  flex-direction: column;
+}
+</style>

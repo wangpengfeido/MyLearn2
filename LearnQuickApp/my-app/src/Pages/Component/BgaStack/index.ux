@@ -1,0 +1,22 @@
+<template>
+    <div class="stack">
+        <text>stack</text>
+        <text>后面的元素覆盖前面的元素</text>
+        <stack>
+            <div style="height:200px;width:750px;background-color:red;"></div>
+            <div style="height:100px;width:750px;background-color:green;"></div>
+        </stack>
+    </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+.stack {
+  flex-direction: column;
+}
+</style>

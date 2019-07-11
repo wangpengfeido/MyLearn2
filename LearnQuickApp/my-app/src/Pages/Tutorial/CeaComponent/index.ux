@@ -1,0 +1,24 @@
+<import name="comp-one" src="./comp-one.ux"></import>
+<template>
+    <div class="component">
+        <text>组件</text>
+        <div class="section">
+            <text class="section-title">自定义组件</text>
+            <comp-one></comp-one>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+@import "../../../Common/common.css";
+
+.component {
+  flex-direction: column;
+}
+</style>

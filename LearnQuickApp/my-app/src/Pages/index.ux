@@ -1,0 +1,32 @@
+<template>
+  <div class="main-page">
+    <div class="title">
+      <text>这里是主页</text>
+    </div>
+
+    <div class="links">
+      <a class="button" href="/Pages/Tutorial">教程</a>
+      <a class="button" href="Pages/Component">组件</a>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  private: {
+
+  },
+}
+</script>
+
+<style>
+@import "../Common/common.css";
+
+.main-page {
+  flex-direction: column;
+}
+.links {
+  flex-direction: column;
+}
+</style>
+

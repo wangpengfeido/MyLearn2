@@ -1,0 +1,21 @@
+<template>
+  <div class="tutorial">
+    <text>教程</text>
+    <a class="button" href="/Pages/Tutorial/CeaComponent">组件</a>
+    <a class="button" href="/Pages/Tutorial/DaaList">List</a>
+  </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+@import "../../Common/common.css";
+
+.tutorial {
+  flex-direction: column;
+}
+</style>
