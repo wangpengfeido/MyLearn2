@@ -1,0 +1,16 @@
+<template>
+  <div>
+    <input type="button" @click="handleClick()" value="dispatch"></input>
+  </div>
+</template>
+
+<script>
+export default {
+  handleClick() {
+    this.$dispatch('aea-b', 'from aea-b')
+  }
+}
+</script>
+
+<style>
+</style>

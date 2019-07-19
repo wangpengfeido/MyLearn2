@@ -1,17 +1,47 @@
-<import name="comp-one" src="./comp-one.ux"></import>
+// 使用import引入组件
+<import name="aba-custom-comp" src="./aba-custom-comp.ux"></import>
+<import name="aea-child-to-parent-a" src="./aea-child-to-parent-a.ux"></import>
+<import name="aea-child-to-parent-b" src="./aea-child-to-parent-b.ux"></import>
+ 
+
 <template>
-    <div class="component">
-        <text>组件</text>
-        <div class="section">
-            <text class="section-title">自定义组件</text>
-            <comp-one></comp-one>
-        </div>
+  <div class="component">
+    <text>组件</text>
+    <div class="section">
+      <text class="section-title">组件自定义</text>
+      <aba-custom-comp></aba-custom-comp>
     </div>
+    <div class="section">
+      <text class="section-title">子组件向父组件-$emit</text>
+      <aea-child-to-parent-a @aea-a-click="handleAeaAClick()"></aea-child-to-parent-a>
+      <text>传入参数的方式</text>
+      <aea-child-to-parent-a @aea-a-click="aeaAClickHandlerFactory('aaaaaa')()"></aea-child-to-parent-a>
+    </div>
+    <div class="section">
+      <text class="section-title">子组件向父组件-$dispatch</text>
+      <aea-child-to-parent-b></aea-child-to-parent-b>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
+import prompt from '@system.prompt'
 
+export default {
+  onInit() {
+    this.$on('aea-b', function (data) {
+      prompt.showToast({ message: data })
+    })
+  },
+  handleAeaAClick(data) {
+    prompt.showToast({ message: data })
+  },
+  aeaAClickHandlerFactory(param) {
+    console.log(param)
+    return function (data) {
+      prompt.showToast({ message: data })
+    }
+  }
 }
 </script>
 

@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <text>这里是自定义组件{{a}}</text>
+  </div>
+</template>
+
+<script>
+export default {
+  // 数据模型只能使用data属性
+  data() {
+    return {
+      a: 'aaa',
+    }
+  }
+}
+</script>
+
+<style>
+</style>
