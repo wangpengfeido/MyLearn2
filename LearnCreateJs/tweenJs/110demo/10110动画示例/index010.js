@@ -3,10 +3,13 @@ class App {
     this.stage = null;
 
     this.circle = null;
+
+    this.tween = null;
   }
   start() {
     this.initStage();
     this.initObject();
+    this.initTween();
     createjs.Ticker.timingMode = createjs.Ticker.RAF;
     createjs.Ticker.on('tick', () => {
       this.tick();
@@ -22,11 +25,15 @@ class App {
     this.circle.y = 100;
     this.stage.addChild(this.circle);
   }
-  animation() {
-    this.circle.x = this.circle.x + (5 - Math.random() * 10);
+  initTween() {
+    this.tween = createjs.Tween.get(this.circle, { loop: true })
+      .to({ x: 400 }, 1000, createjs.Ease.getPowInOut(4))
+      .to({ alpha: 0, y: 25 }, 500, createjs.Ease.getPowInOut(2))
+      .to({ alpha: 0, y: 225 }, 100)
+      .to({ alpha: 1, y: 100 }, 500, createjs.Ease.getPowInOut(2))
+      .to({ x: 100 }, 800, createjs.Ease.getPowInOut(2));
   }
   tick() {
-    this.animation();
     this.stage.update();
   }
 }
