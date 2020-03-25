@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+      }
+      .reference {
+        display: flex;
+      }
+      .reference .item {
+        width: 50px;
+        height: 10px;
+      }
+      .reference .item:nth-of-type(2n) {
+        background-color: blue;
+      }
+      .reference .item:nth-of-type(2n + 1) {
+        background-color: blueviolet;
+      }
+      .test {
+        width: 100px;
+        height: 100px;
+        background-color: grey;
+        position: fixed;
+        left: 100px;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reference">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+    <div class="test"></div>
+
+    <script src="../../node_modules/@tweenjs/tween.js/dist/tween.umd.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
