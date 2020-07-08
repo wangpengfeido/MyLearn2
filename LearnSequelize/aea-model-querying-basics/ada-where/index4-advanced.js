@@ -27,15 +27,15 @@ User.init(
   console.log('======', JSON.stringify(user1));
 
   // 更复杂的情况
-  // where char_length(name)=3 or address like 'china%' or (address like 'america%' and char_length(name)>4)
+  // where char_length(name)=3 or address like '%china' or (address like '%america' and char_length(name)>4)
   user2 = await User.findAll({
     where: {
       [Op.or]: [
         sequelize.where(sequelize.fn('char_length', sequelize.col('name')), 3),
-        { address: { [Op.like]: 'china%' } },
+        { address: { [Op.like]: '%china' } },
         {
           [Op.and]: [
-            { address: { [Op.like]: 'america%' } },
+            { address: { [Op.like]: '%america' } },
             sequelize.where(sequelize.fn('char_length', sequelize.col('name')), { [Op.gt]: 4 }),
           ],
         },
