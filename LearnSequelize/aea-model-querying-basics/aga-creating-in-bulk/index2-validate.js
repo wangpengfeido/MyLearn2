@@ -21,7 +21,7 @@ User.init(
 (async () => {
   await sequelize.sync({ force: true });
 
-  // bulkCreate 不会对每个对象进行验证（create 会）
+  // bulkCreate 默认不会对每个对象进行验证（create 会）
   const users = await User.bulkCreate(
     [
       // 不验证时, 不符合条件的值也会被正常创建，不会引发错误
@@ -31,7 +31,7 @@ User.init(
       { name: 'jerry', age: 15 },
     ],
     {
-      // 开启验证
+      // 开启验证。这会降低效率
       validate: true,
     }
   );
