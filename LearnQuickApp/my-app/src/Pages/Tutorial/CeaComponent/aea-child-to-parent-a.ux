@@ -7,7 +7,6 @@
 <script>
 
 export default {
-  // 快应用的$emit存在缺陷，在标签上监听事件时，无法传入自定义参数
   handleClick() {
     this.$emit('aeaAClick', 'from aea-a')
   }
