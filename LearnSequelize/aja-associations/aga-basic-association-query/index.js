@@ -34,7 +34,7 @@ Ship.belongsTo(Captain);
 
   // 下面是预先加载
 
-  // 使用 include 参数将 Ship 一起查询回来。（只执行了一个 sql）
+  // 使用 include 参数将 Ship 一起查询回来。（只执行了一个 sql - join）
   const jack2 = await Captain.findOne({ where: { name: 'Jack Sparrow' }, include: Ship });
   console.log('======jack2', JSON.stringify(jack2));
 })();
