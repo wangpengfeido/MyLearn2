@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../../node_modules/axios/dist/axios.js"></script>
+    <script>
+      const myAxios = axios.create({
+        transformResponse: [
+          function (data) {
+            // throw 的错误被 reject 捕获。
+            throw new Error("this is my error");
+            return data;
+          },
+        ],
+      });
+      myAxios
+        .get("http://localhost:3000/api/json")
+        .then((data) => {
+          console.log(1, data);
+        })
+        .catch((err) => {
+          console.log(2, err);
+          console.log(err.message);
+        });
+    </script>
+  </body>
+</html>

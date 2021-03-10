@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../../node_modules/axios/dist/axios.js"></script>
+    <script>
+      const myAxios = axios.create({
+        // 默认的转换器被取代
+        // 500 仍然被 reject
+        transformResponse: [],
+      });
+      myAxios
+        .get("http://localhost:3000/api/500")
+        .then((data) => {
+          console.log(1, data);
+        })
+        .catch((err) => {
+          console.log(2, err);
+        });
+    </script>
+  </body>
+</html>
