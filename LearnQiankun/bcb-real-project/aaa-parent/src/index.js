@@ -19,11 +19,3 @@ document.querySelector("#go-to-bbb-child").addEventListener("click", () => {
 document.querySelector("#go-to-xxx").addEventListener("click", () => {
   window.history.pushState(null, "", "/xxx");
 });
-document.querySelector("#manual-load-child").addEventListener("click", () => {
-  // 手动加载微应用
-  loadMicroApp({
-    name: "bbb-child",
-    entry: "//localhost:18081",
-    container: "#container-manually",
-  });
-});
