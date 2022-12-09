@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="../../../../node_modules/@antv/x6/dist/x6.js"></script>
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <script>
+    const graph = new X6.Graph({
+      container: document.getElementById("container"),
+      width: 800,
+      height: 600,
+      background: {
+        color: "#fffbe6",
+      },
+      grid: {
+        size: 10,
+        visible: true,
+      },
+      translating: {
+        // 限制子节点移动
+        restrict(view) {
+          const cell = view.cell
+          if (cell.isNode()) {
+            const parent = cell.getParent()
+            if (parent) {
+              return parent.getBBox()
+            }
+          }
+
+          return null
+        },
+      },
+    });
+
+    const child1 = graph.addNode({
+      x: 100,
+      y: 80,
+      width: 120,
+      height: 60,
+      label: 'Child\n(inside)',
+      zIndex: 10,
+      attrs: {
+        body: {
+          stroke: 'none',
+          fill: '#3199FF',
+        },
+        label: {
+          fill: '#fff',
+        },
+      },
+    })
+
+    const child2 = graph.createNode({
+      x: 450,
+      y: 80,
+      width: 120,
+      height: 60,
+      label: 'Child\n(outside)',
+      zIndex: 10,
+      attrs: {
+        body: {
+          stroke: 'none',
+          fill: '#47C769',
+        },
+        label: {
+          fill: '#fff',
+        },
+      },
+    })
+
+    const parent = graph.addNode({
+      id: 'parent',
+      x: 80,
+      y: 40,
+      width: 320,
+      height: 240,
+      zIndex: 1,
+      label: 'Parent\n(try to move me)',
+    })
+
+    parent.addChild(child1)
+    parent.addChild(child2)
+
+    console.log(graph.toJSON())
+  </script>
+</body>
+
+</html>

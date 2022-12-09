@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="../../../../node_modules/@antv/x6/dist/x6.js"></script>
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <script>
+    const data = {
+      nodes: [
+        {
+          id: "node1",
+          x: 40,
+          y: 40,
+          width: 80,
+          height: 40,
+          label: "hello",
+        },
+        {
+          id: "node2",
+          x: 160,
+          y: 180,
+          width: 80,
+          height: 40,
+          label: "world",
+        },
+      ],
+      edges: [
+        {
+          source: "node1",
+          target: "node2",
+        },
+      ],
+    };
+    const graph = new X6.Graph({
+      container: document.getElementById("container"),
+      width: 800,
+      height: 600,
+      background: {
+        color: "#fffbe6",
+      },
+      grid: {
+        size: 10,
+        visible: true,
+      },
+    });
+    graph.fromJSON(data);
+  </script>
+</body>
+
+</html>

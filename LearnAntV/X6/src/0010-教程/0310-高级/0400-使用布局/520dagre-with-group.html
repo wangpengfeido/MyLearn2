@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="../../../../node_modules/@antv/x6/dist/x6.js"></script>
+  <script src="../../../../node_modules/@antv/layout/dist/layout.min.js"></script>
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <script>
+    const data = {
+      nodes: [],
+      edges: [],
+    }
+
+    let childrenOfParent = [];
+    for (let i = 1; i <= 12; i++) {
+      let id = i + ''
+      childrenOfParent.push(id)
+      data.nodes.push({
+        id,
+        shape: 'rect',
+        width: 60,
+        height: 30,
+        label: i,
+        parent: 'parent',
+        zIndex: 2,
+        attrs: {
+          body: {
+            fill: '#855af2',
+            stroke: 'transparent',
+          },
+          label: {
+            fill: '#ffffff',
+          },
+        },
+      })
+    }
+    data.nodes.push({
+      id: 'parent',
+      width: 320,
+      height: 240,
+      label: 'parent',
+      zIndex: 1,
+      children: childrenOfParent
+    })
+
+    data.edges.push(
+      ...[
+        {
+          source: '1',
+          target: '2',
+          attrs: {
+            line: {
+              stroke: '#fd6d6f',
+              strokeWidth: 1,
+            },
+          },
+        },
+        {
+          source: '2',
+          target: '3',
+          attrs: {
+            line: {
+              stroke: '#fd6d6f',
+              strokeWidth: 1,
+            },
+          },
+        },
+        {
+          source: '2',
+          target: '4',
+          attrs: {
+            line: {
+              stroke: '#fd6d6f',
+              strokeWidth: 1,
+            },
+          },
+        },
+        {
+          source: '4',
+          target: '5',
+          attrs: {
+            line: {
+              stroke: '#fd6d6f',
+              strokeWidth: 1,
+            },
+          },
+        },
+        {
+          source: '4',
+          target: '6',
+          attrs: {
+            line: {
+              stroke: '#fd6d6f',
+              strokeWidth: 1,
+            },
+          },
+        },
+        {
+          source: '4',
+          target: '7',
+          attrs: {
+            line: {
+              stroke: '#fd6d6f',
+              strokeWidth: 1,
+            },
+          },
+        },
+        {
+          source: '4',
+          target: '8',
+          attrs: {
+            line: {
+              stroke: '#fd6d6f',
+              strokeWidth: 1,
+            },
+          },
+        },
+        {
+          source: '5',
+          target: '9',
+          attrs: {
+            line: {
+              stroke: '#fd6d6f',
+              strokeWidth: 1,
+            },
+          },
+        },
+        {
+          source: '6',
+          target: '10',
+          attrs: {
+            line: {
+              stroke: '#fd6d6f',
+              strokeWidth: 1,
+            },
+          },
+        },
+        {
+          source: '7',
+          target: '11',
+          attrs: {
+            line: {
+              stroke: '#fd6d6f',
+              strokeWidth: 1,
+            },
+          },
+        },
+        {
+          source: '8',
+          target: '12',
+          attrs: {
+            line: {
+              stroke: '#fd6d6f',
+              strokeWidth: 1,
+            },
+          },
+        },
+      ],
+    )
+
+    const dagreLayout = new layout.DagreLayout({
+      type: 'dagre',
+      rankdir: 'LR',
+      align: 'UR',
+      ranksep: 30,
+      nodesep: 15,
+      controlPoints: true,
+    })
+    const model = dagreLayout.layout(data)
+
+    const graph = new X6.Graph({
+      container: document.getElementById("container"),
+      width: 800,
+      height: 600,
+      background: {
+        color: "#fffbe6",
+      },
+      grid: {
+        size: 10,
+        visible: true,
+      },
+      translating: {
+        // 限制子节点移动
+        restrict(view) {
+          const cell = view.cell
+          if (cell.isNode()) {
+            const parent = cell.getParent()
+            if (parent) {
+              return parent.getBBox()
+            }
+          }
+
+          return null
+        },
+      }
+    });
+    graph.fromJSON(data);
+    console.log(graph.toJSON())
+  </script>
+</body>
+
+</html>
