@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>坐标轴类型</title>
+    <script src="../../../node_modules/echarts3/dist/echarts.js"></script>
+  </head>
+  <body>
+    <div id="main" style="width: 600px; height: 400px"></div>
+
+    <script>
+      var date1 = new Date('2016/01/01');
+      var date2 = new Date('2017/01/01');
+      console.log(date1, date2);
+
+      var myChart = echarts.init(document.getElementById('main'));
+      var option = {
+        title: {
+          text: '标题',
+        },
+        tooltip: {},
+        legend: {
+          data: ['系列1'],
+        },
+        xAxis: {
+          type: 'time',
+          data: [date1, date2],
+        },
+        yAxis: {},
+        series: [
+          {
+            name: '系列1',
+            type: 'bar',
+            data: [1, 2, 3, 4, 5],
+          },
+        ],
+      };
+
+      myChart.setOption(option);
+    </script>
+  </body>
+</html>

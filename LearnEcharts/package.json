@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "echarts": "^3.3.2"
+    "echarts3": "npm:echarts@^3.3.2",
+    "echarts5": "npm:echarts@^5.4.0"
   }
 }
