@@ -15,11 +15,11 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.12.1",
     "eslint-plugin-hybrid": "0.0.5",
-    "hap-toolkit": "^0.4.7",
+    "hap-toolkit": "^1.9.11",
     "less": "^3.9.0",
-    "less-loader": "^5.0.0",
+    "less-loader": "^11.1.0",
     "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^13.2.0"
   },
   "dependencies": {}
 }
